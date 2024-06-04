@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Título de la página -->
+    <title>Confirm Delete</title>
+  </head>
+  <body>
+    <!-- Encabezado principal que pregunta si el usuario está seguro de querer eliminar el producto -->
+    <h1>Are you sure you want to delete {{ product.name }}?</h1>
+
+    <!-- Formulario que envía una solicitud POST para confirmar la eliminación del producto -->
+    <form method="post">
+      <!-- Token CSRF para proteger contra ataques CSRF -->
+      {% csrf_token %}
+      <!-- Botón para confirmar la eliminación del producto -->
+      <button type="submit">Yes, delete</button>
+    </form>
+
+    <!-- Enlace para cancelar la eliminación y volver a la lista de productos -->
+    <a href="{% url 'product_list' %}">No, take me back</a>
+  </body>
+</html>

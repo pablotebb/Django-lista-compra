@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Título de la página que cambia dinámicamente según si se está editando o creando un producto -->
+    <title>{% if form.instance.pk %}Edit{% else %}New{% endif %} Product</title>
+  </head>
+  <body>
+    <!-- Encabezado principal que también cambia dinámicamente según si se está editando o creando un producto -->
+    <h1>{% if form.instance.pk %}Edit{% else %}New{% endif %} Product</h1>
+
+    <!-- Formulario que envía datos mediante el método POST -->
+    <form method="post">
+      <!-- Token CSRF para proteger contra ataques CSRF -->
+      {% csrf_token %}
+      <!-- Renderiza el formulario como párrafos (cada campo dentro de un <p>) -->
+      {{ form.as_p }}
+      <!-- Botón para enviar el formulario -->
+      <button type="submit">Save</button>
+    </form>
+
+    <!-- Enlace para volver a la lista de productos -->
+    <a href="{% url 'product_list' %}">Back to Product List</a>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Título de la página -->
+    <title>Product Detail</title>
+  </head>
+  <body>
+    <!-- Encabezado principal que muestra el nombre del producto -->
+    <h1>{{ product.name }}</h1>
+
+    <!-- Párrafo que muestra la descripción del producto -->
+    <p>{{ product.description }}</p>
+
+    <!-- Párrafo que muestra el precio del producto -->
+    <p>Price: {{ product.price }}</p>
+
+    <!-- Párrafo que muestra si el producto está seleccionado o no -->
+    <p>Selected: {{ product.selected }}</p>
+
+    <!-- Enlace para volver a la lista de productos -->
+    <a href="{% url 'product_list' %}">Back to Product List</a>
+  </body>
+</html>

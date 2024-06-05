@@ -3,6 +3,14 @@
   <head>
     <!-- Título de la página -->
     <title>Confirm Delete</title>
+    <!-- Cargar archivos estáticos -->
+    {% load static %}
+    <!-- Incluir el archivo CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'appListaCompra/styles.css' %}"
+    />
   </head>
   <body>
     <!-- Encabezado principal que pregunta si el usuario está seguro de querer eliminar el producto -->

@@ -3,6 +3,14 @@
   <head>
     <!-- Etiqueta que define el título de la página en la barra de título del navegador -->
     <title>Product List</title>
+    <!-- Cargar archivos estáticos -->
+    {% load static %}
+    <!-- Incluir el archivo CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'appListaCompra/styles.css' %}"
+    />
   </head>
   <body>
     <!-- Encabezado principal de la página -->

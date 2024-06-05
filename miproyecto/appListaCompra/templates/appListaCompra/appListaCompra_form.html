@@ -3,6 +3,14 @@
   <head>
     <!-- Título de la página que cambia dinámicamente según si se está editando o creando un producto -->
     <title>{% if form.instance.pk %}Edit{% else %}New{% endif %} Product</title>
+    <!-- Cargar archivos estáticos -->
+    {% load static %}
+    <!-- Incluir el archivo CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'appListaCompra/styles.css' %}"
+    />
   </head>
   <body>
     <!-- Encabezado principal que también cambia dinámicamente según si se está editando o creando un producto -->
